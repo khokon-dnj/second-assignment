@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*-------------------- style of header section started ----------------*/
+
+header{
+    background-color: #2D25A0;
+    margin-bottom: 7%;
+}
+.nav-links{
+    width: 90%;
+    margin: auto;
+    padding-top: 2%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+}
+.login-btn{
+    display:inline-flex;
+    background-color: #E02C6D; 
+    padding: 10px 24px; 
+}
+.login-btn img{
+    width: 24px;
+    margin-right: 5px;
+}
+.login-btn a{
+    text-decoration: none;
+    color: white;
+    position: static;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    padding-right: 30px;
+    color: aliceblue;
+    font-size: 15px;
+}
+.top-banner{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.banner-info h1{
+    color: white;
+    font-weight: 700;
+    font-size: 55px;
+}
+.banner-pic img{
+    width: 450px;
+}
+.fa-arrow-right{
+    margin-left: 5px;
+    position: static;
+}
+.watch-btn{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 18px;
+    padding: 10px 24px;
+    border-radius: 15px;
+    color: white;
+    background-color: #E02C6D;
+    border: none;
+}
+
+/*-------------------- style of header section ended ----------------*/
+
+/*------------------------ style of main part started --------------------------
+--------------------------------------------------------------------------------*/
+.container{
+    /* background-color: slateblue; */
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10%;
+}
+.key-players{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 25px;
+    justify-content: center;
+}
+.player-profile{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid grey; */
+    box-shadow: 10px 20px 25px grey;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: justify;
+}
+.player-profile:hover{
+    background-color: springgreen;
+}
+.player-info h2{
+    color: rgb(231, 31, 31);
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 28px;
+}
+.player-info h2:hover{
+    cursor: pointer;
+    color: rgb(100, 93, 93);
+}
+.player-info p{
+    color: slategray;
+}
+.player-pic img{
+    width: 100%;
+}
+
+
+.highlight-area{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+.highlight-info h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+.highlight-pic img{
+    width: 90%;
+    margin-left: 10%;
+}
+/*------------------------ style of main part ended --------------------------
+--------------------------------------------------------------------------------*/
+
+/*-------------------------- style of footer started -----------------*/
+footer{
+    width:85%;
+    margin: auto;
+}
+.logo{
+    width: 40%;
+    margin: auto;
+    /* background-color: chocolate; */
+    align-items: center;
+}
+.logo img{
+    height: 110px;
+}
+.social-links{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+.social-links img{
+    height: 32px;
+    width: 32px;
+    padding: 2px 6px;
+    border: 1px solid grey;
+    border-radius: 20px;
+}
+.copyright-area{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width:668px) {
+    header container{
+        width:100%;
+    }
+    .nav-links{
+        display: none;
+    }
+    .top-banner {
+        padding-top: 30px;
+        flex-direction: column;
+    }
+    .banner-info h1{
+        font-size: 30px;
+    }
+    .banner-pic img{
+        margin-top: 40px;
+        width:100%
+    }
+   .key-players{
+       grid-template-columns: repeat(1, 1fr);
+   }
+   .highlight-area{
+       padding-top: 30px;
+       width: 90%;
+       flex-direction: column;
+   }
+   .highlight-info h1{
+       font-size: 30px;
+   }
+   .highlight-pic img{
+       width: 100%;
+       margin-top: 30px;
+       margin-left: 0;
+   }
+   footer{
+       width: 100%;
+   }
+   .logo{
+       width: 50%;
+       margin: auto;
+   }
+   .logo img{
+       width: 100%;
+       height: 63px;
+   }
+   .social-links{
+       width: 60%;
+       margin: auto;
+   }
+   .social-links a{
+       display: inline-flex;
+   }
+}
