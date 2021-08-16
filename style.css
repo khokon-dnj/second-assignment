@@ -23,6 +23,28 @@ header{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
+    padding-right: 30px;
+}
+.nav-links ul li a{
+    position: relative;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 17px;
+}
+.nav-links ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scale(0,1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ;
+}
+.nav-links ul li a:hover::after{
+    transform: scale(1,1);
 }
 .login-btn{
     display:inline-flex;
@@ -38,12 +60,7 @@ header{
     color: white;
     position: static;
 }
-.nav-links ul li a{
-    text-decoration: none;
-    padding-right: 30px;
-    color: aliceblue;
-    font-size: 15px;
-}
+
 .top-banner{
     width: 90%;
     margin: auto;
@@ -71,6 +88,10 @@ header{
     color: white;
     background-color: #E02C6D;
     border: none;
+    cursor: pointer;
+}
+.watch-btn:hover{
+    background-color: teal;
 }
 
 /*-------------------- style of header section ended ----------------*/
@@ -102,20 +123,20 @@ header{
     text-align: justify;
 }
 .player-profile:hover{
-    background-color: springgreen;
+    background-color: rgba(70, 6, 64, 0.5);
 }
 .player-info h2{
-    color: rgb(231, 31, 31);
+    color: rgb(199, 20, 20);
     margin-bottom: 5px;
     font-weight: 600;
     font-size: 28px;
 }
 .player-info h2:hover{
     cursor: pointer;
-    color: rgb(100, 93, 93);
+    color: #fff;
 }
 .player-info p{
-    color: slategray;
+    color: rgb(17, 17, 17);
 }
 .player-pic img{
     width: 100%;
@@ -140,6 +161,45 @@ header{
 /*------------------------ style of main part ended --------------------------
 --------------------------------------------------------------------------------*/
 
+
+/*-------------- style of team-standing area started -----------------*/
+.team-standings{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 8%;
+}
+.team-standings h2{
+    cursor: pointer;
+}
+.point-table{
+    display: flex;
+    justify-content: space-around;
+}
+table{
+    border-collapse: collapse;
+    width: 45%;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+table:hover{
+    background:transparent;
+}
+th,td{
+    text-align: center;
+    padding: 10px;
+}
+tr{
+    padding: 10px 20px;
+}
+th{
+    background-color: teal;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+/*-------------- style of team-standing area ended -----------------*/
+
+
 /*-------------------------- style of footer started -----------------*/
 footer{
     width:85%;
@@ -148,7 +208,6 @@ footer{
 .logo{
     width: 40%;
     margin: auto;
-    /* background-color: chocolate; */
     align-items: center;
 }
 .logo img{
@@ -171,14 +230,22 @@ footer{
     margin-bottom: 40px;
     text-align: center;
 }
+/*-------------------------- style of footer ended -----------------*/
 
+
+/*-------------------- --media query------------------ --*/
+
+/*----------------------- for-mobile--------------------- */
 
 @media only screen and (max-width:668px) {
     header container{
         width:100%;
     }
     .nav-links{
-        display: none;
+        padding-top: 25px;
+    }
+    .nav-links ul{
+        visibility: hidden;
     }
     .top-banner {
         padding-top: 30px;
@@ -225,4 +292,12 @@ footer{
    .social-links a{
        display: inline-flex;
    }
+   .point-table{
+       flex-direction: column;
+       align-items: center;
+    }
+    #g-b{
+        margin-top: 20px;
+    }
+
 }
